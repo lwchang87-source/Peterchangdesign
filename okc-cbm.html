@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Compatibility Based Matching — Peter</title>
+  <meta name="description" content="Compatibility-based matching rooted in self-discovery and psychologically informed personality insights." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .cs-hero { padding-top: calc(var(--nav-h) + 60px); padding-bottom: 80px; }
+    .cs-back { display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.85rem; font-weight: 500; color: var(--text-muted); margin-bottom: 2.5rem; transition: color 0.2s ease, gap 0.2s ease; }
+    .cs-back:hover { color: var(--text); gap: 0.75rem; }
+    .cs-meta { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.5rem; }
+    .cs-title { font-size: clamp(4.5rem, 10vw, 9rem); margin-bottom: 3rem; }
+    .cs-subtitle { font-size: 1.1rem; color: var(--text-muted); line-height: 1.75; }
+    .cs-hero-grid { display: grid; grid-template-columns: 60% 40%; gap: 4rem; align-items: start; margin-top: 1.5rem; width: 100%; }
+    .cs-details-bar { display: grid; grid-template-columns: 1fr; gap: 1.25rem; }
+    .cs-detail-label { font-size: 0.9rem; font-weight: 600; color: var(--text-subtle); margin-bottom: 0.4rem; }
+    .cs-detail-val { font-size: 1.25rem; color: var(--text); font-weight: 500; }
+    .cs-image-full { width: 100%; aspect-ratio: 16/7; background: var(--bg-alt); border: 1px solid var(--border); border-radius: 16px; display: flex; align-items: center; justify-content: center; font-size: 0.875rem; color: var(--text-subtle); margin: 3rem 0; overflow: hidden; }
+    .cs-image-full img { width: 100%; height: 100%; object-fit: cover; }
+    .cs-content { max-width: 1100px; margin: 0 auto; }
+    .cs-content h2 { font-size: 1.75rem; margin: 0; }
+    .cs-content p { font-size: 1.15rem; color: var(--text-muted); line-height: 1.8; margin-bottom: 1.25rem; }
+    .cs-content p strong { color: var(--text); font-weight: 600; }
+    .cs-callout { background: var(--accent-light); border-left: 3px solid var(--accent); border-radius: 0 12px 12px 0; padding: 1.25rem 1.5rem; margin: 2rem 0; font-size: 1.05rem; color: var(--text); font-style: italic; font-family: var(--font-serif); line-height: 1.6; }
+    .cs-image-half { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 2.5rem 0; }
+    .cs-img-placeholder { aspect-ratio: 4/3; background: var(--bg-alt); border: 1px solid var(--border); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 0.8rem; color: var(--text-subtle); overflow: hidden; }
+    .cs-img-placeholder img { width: 100%; height: 100%; object-fit: cover; }
+    .cs-outcome-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin: 2.5rem 0; }
+    .cs-outcome { background: var(--white); border: 1px solid var(--border); border-radius: 14px; padding: 1.5rem; text-align: center; }
+    .cs-outcome-num { font-family: var(--font-serif); font-size: 2.25rem; color: var(--accent); line-height: 1; margin-bottom: 0.4rem; }
+    .cs-outcome-label { font-size: 0.82rem; color: var(--text-muted); line-height: 1.4; }
+    .cs-nav-bottom { display: flex; justify-content: space-between; align-items: center; padding: 3rem 0; border-top: 1px solid var(--border); margin-top: 4rem; }
+    .cs-nav-link { display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.875rem; font-weight: 500; color: var(--text-muted); transition: color 0.2s ease; }
+    .cs-nav-link:hover { color: var(--text); }
+    @media (max-width: 900px) {
+      .cs-hero-grid { grid-template-columns: 1fr; gap: 2rem; }
+    }
+
+    @media (max-width: 768px) {
+      .cs-details-bar { grid-template-columns: 1fr 1fr; }
+      .cs-image-half { grid-template-columns: 1fr; }
+      .cs-outcome-grid { grid-template-columns: 1fr; }
+    }
+
+    .cs-type-pills { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+    .cs-pill { display: inline-block; padding: 0.25rem 0.75rem; border-radius: 999px; border: 1px solid var(--border); font-size: 0.95rem; font-weight: 500; color: var(--text-muted); background: var(--bg-alt); white-space: nowrap; }
+
+    .cs-impact-cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
+    .cs-impact-card { background: transparent; border: none; padding: 1.75rem 1.5rem; text-align: center; }
+    .cs-impact-num { font-family: var(--font-serif); font-size: 5rem; color: var(--text); line-height: 1; margin-bottom: 0.5rem; }
+    .cs-impact-unit { font-size: 2.5rem; vertical-align: baseline; }
+    .cs-impact-label { font-size: 0.85rem; color: var(--text-muted); line-height: 1.5; }
+    .cs-snapshot { width: 100%; aspect-ratio: 16/9; background: var(--bg-alt); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; margin-bottom: 1.5rem; }
+    .cs-snapshot img { width: 100%; height: 100%; object-fit: cover; }
+    .cs-snapshot:last-child { margin-bottom: 0; }
+    .cs-snapshot-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .cs-snapshot-grid .cs-snapshot { margin-bottom: 0; aspect-ratio: 1/1; }
+    .cs-snapshot-grid .cs-snapshot:last-child:nth-child(odd) { grid-column: 1 / -1; aspect-ratio: 16/9; }
+    @media (max-width: 768px) { .cs-snapshot-grid { grid-template-columns: 1fr; } .cs-snapshot-grid .cs-snapshot:last-child:nth-child(odd) { grid-column: auto; aspect-ratio: 4/3; } }
+    .cs-section-grid { display: grid; grid-template-columns: 3fr 7fr; gap: 3rem; margin-bottom: 5rem; }
+    .cs-section-heading h2 { font-size: 2.25rem; margin: 0; position: sticky; top: calc(var(--nav-h) + 2rem); }
+    .cs-section-body > *:first-child { margin-top: 0; }
+    @media (max-width: 768px) { .cs-section-grid { grid-template-columns: 1fr; gap: 0.75rem; } }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Peter Chang</a>
+            <ul class="nav-links">
+        <li><a href="work.html">Work</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="https://www.linkedin.com/in/peter-chang-4aa02450" target="_blank" rel="noopener">LinkedIn</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <section class="cs-hero">
+    <div class="container">
+      <h1 class="cs-title">Compatibility Based Matching</h1>
+
+      <div class="cs-hero-grid">
+        <div class="cs-hero-left">
+          <p class="cs-subtitle">OKCupid Compatibility-Based Matching reimagines the dating experience as one rooted in self-discovery and psychologically informed compatibility, moving beyond surface-level attraction or shared interests. Users engage with personality assessments such as MBTI, Love Languages, and Attachment Styles to generate rich personality profiles and dynamic compatibility scores. These insights enable exploration of deeper dimensions like communication styles, core values, and emotional needs.</p>
+          <p class="cs-subtitle">Building on OkCupid's legacy of Match % and question-based matching, this initiative introduces a strategic shift toward personality-led discovery under the positioning "Dating with intention starts with knowing yourself." By delivering immediate single-player value through meaningful personality insights, the experience remains engaging from day one—reducing churn in low-liquidity markets and powering a CRM flywheel with introspective content.</p>
+          <p class="cs-subtitle">The approach also addresses key platform challenges, with strong appeal to women and the potential to improve female return rates, while unlocking new opportunities for engagement, monetization, and an estimated $45M revenue upside in the U.S. market.</p>
+        </div>
+                <div class="cs-hero-right">
+          <div class="cs-details-bar">
+            <div>
+              <div class="cs-detail-label">Role</div>
+              <div class="cs-detail-val">Design Director</div>
+            </div>
+            <div>
+              <div class="cs-detail-label">Type</div>
+              <div class="cs-type-pills">
+                <span class="cs-pill">Strategy</span>
+                <span class="cs-pill">Product Design</span>
+                <span class="cs-pill">Research</span>
+              </div>
+            </div>
+            <div>
+              <div class="cs-detail-label">Date</div>
+              <div class="cs-detail-val">2026</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+  </section>
+
+  <div class="container">
+    <div class="cs-image-full">
+      <img src="Assets/Hero_Compatibility Based Matching.png" alt="Compatibility Based Matching" />
+    </div>
+  </div>
+
+    <section style="padding: 5rem 0 100px;">
+    <div class="container">
+      <div class="cs-content">
+        <div class="cs-section-grid">
+          <div class="cs-section-heading"><h2>Context</h2></div>
+          <div class="cs-section-body">
+            <p>As a long-established platform, OkCupid faces the need to evolve in order to attract a new generation of younger users with shifting expectations around dating. This project supports a strategic pivot toward a more intentional and self-aware experience, captured in the positioning "Dating with intention starts with knowing yourself." Building on OkCupid's legacy of Match % and question-based matching, the initiative introduces personality-led discovery and deeper compatibility insights, reframing the product around self-understanding as the foundation for meaningful connections.</p>
+          </div>
+        </div>
+
+        <div class="cs-section-grid">
+          <div class="cs-section-heading"><h2>Problem</h2></div>
+          <div class="cs-section-body">
+            <p>OkCupid is facing increasing challenges in sustaining meaningful user engagement within a saturated dating landscape. Swipe fatigue has diminished the effectiveness of traditional browsing patterns, leading to disengagement and reduced user satisfaction. The experience remains largely dependent on securing matches, offering little to no standalone value for users who do not immediately connect with others—particularly in lower-liquidity environments. This dynamic contributes to a perception of shallow interactions, where decisions are driven more by surface-level signals than deeper compatibility. As a result, the platform struggles with a low female return rate, highlighting the need for a more intentional, value-driven experience that fosters trust, depth, and sustained engagement.</p>
+          </div>
+        </div>
+
+        <div class="cs-section-grid">
+          <div class="cs-section-heading"><h2>Goal</h2></div>
+          <div class="cs-section-body">
+            <ul>
+              <li>Offering deeper profiles, not just photos</li>
+              <li>Single-player mode (quizzes, insights) = instant utility</li>
+              <li>Matching on patterns (e.g., emotional styles) not just preferences</li>
+              <li>Research shows this model strongly resonates with women</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="cs-section-grid">
+          <div class="cs-section-heading"><h2>Impact</h2></div>
+          <div class="cs-section-body">
+            <p>In development</p>
+          </div>
+        </div>
+
+        <div style="margin-bottom: 3.5rem;">
+          <h2 style="font-size: 2.25rem; margin: 0 0 2rem; font-family: var(--font-serif);">Product Snapshots</h2>
+          <div class="cs-snapshot"><img src="Assets/1 column 1_Compatibility Based Matching.png" alt="CBM snapshot 1" /></div>
+          <div class="cs-snapshot-grid" style="margin-bottom: 1rem;">
+            <div class="cs-snapshot"><img src="Assets/2 column 1_Compatibility Based Matching.png" alt="CBM snapshot 2" /></div>
+            <div class="cs-snapshot"><img src="Assets/2 column 2_Compatibility Based Matching.png" alt="CBM snapshot 3" /></div>
+          </div>
+          <div class="cs-snapshot"><img src="Assets/1 column 2_Compatibility Based Matching.png" alt="CBM snapshot 4" /></div>
+          <div class="cs-snapshot"><img src="Assets/1 column 3_Compatibility Based Matching.png" alt="CBM snapshot 5" /></div></div>
+
+      </div>
+    </div>
+  </section>
+  </section>
+
+  <footer>
+    <p>© 2026 Peter Chang. All rights reserved.</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

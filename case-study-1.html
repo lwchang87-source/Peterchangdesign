@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reimagining the Match Experience — Peter</title>
+  <meta name="description" content="How we redesigned core matching flows to reduce decision fatigue and drive meaningful connections." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .cs-hero {
+      padding-top: calc(var(--nav-h) + 60px);
+      padding-bottom: 80px;
+          }
+
+    .cs-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      margin-bottom: 2.5rem;
+      transition: color 0.2s ease, gap 0.2s ease;
+    }
+
+    .cs-back:hover {
+      color: var(--text);
+      gap: 0.75rem;
+    }
+
+    .cs-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .cs-title {
+      font-size: clamp(4.5rem, 10vw, 9rem);
+      margin-bottom: 1.25rem;
+          }
+
+    .cs-subtitle {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      max-width: 800px;
+      line-height: 1.75;
+    }
+
+    .cs-hero-grid {
+      display: grid;
+      grid-template-columns: 60% 40%;
+      gap: 4rem;
+      align-items: start;
+      margin-top: 1.5rem;
+      width: 100%;
+    }
+
+    .cs-details-bar {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.25rem;
+    }
+
+    .cs-detail-label {
+      font-size: 0.9rem;
+      color: var(--text-subtle);
+      margin-bottom: 0.4rem;
+    }
+
+    .cs-detail-val {
+      font-size: 1.25rem;
+      color: var(--text);
+      font-weight: 500;
+    }
+
+    .cs-image-full {
+      width: 100%;
+      aspect-ratio: 16/7;
+      background: var(--bg-alt);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.875rem;
+      color: var(--text-subtle);
+      margin: 3rem 0;
+      overflow: hidden;
+    }
+
+    .cs-content {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .cs-content h2 {
+      font-size: 1.75rem;
+      margin: 0;
+    }
+
+    .cs-content h3 {
+      font-size: 1.25rem;
+      margin: 2rem 0 0.75rem;
+    }
+
+    .cs-content p {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      line-height: 1.8;
+      margin-bottom: 1.25rem;
+    }
+
+    .cs-content p strong {
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    .cs-callout {
+      background: var(--accent-light);
+      border-left: 3px solid var(--accent);
+      border-radius: 0 12px 12px 0;
+      padding: 1.25rem 1.5rem;
+      margin: 2rem 0;
+      font-size: 1.05rem;
+      color: var(--text);
+      font-style: italic;
+      font-family: var(--font-serif);
+      line-height: 1.6;
+    }
+
+    .cs-image-half {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin: 2.5rem 0;
+    }
+
+    .cs-img-placeholder {
+      aspect-ratio: 4/3;
+      background: var(--bg-alt);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+      color: var(--text-subtle);
+    }
+
+    .cs-outcome-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+      margin: 2.5rem 0;
+    }
+
+    .cs-outcome {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.5rem;
+      text-align: center;
+    }
+
+    .cs-outcome-num {
+      font-family: var(--font-serif);
+      font-size: 2.25rem;
+      color: var(--accent);
+      line-height: 1;
+      margin-bottom: 0.4rem;
+    }
+
+    .cs-outcome-label {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      line-height: 1.4;
+    }
+
+    .cs-nav-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 3rem 0;
+      border-top: 1px solid var(--border);
+      margin-top: 4rem;
+    }
+
+    .cs-nav-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      transition: color 0.2s ease;
+    }
+
+    .cs-nav-link:hover {
+      color: var(--text);
+    }
+
+    @media (max-width: 900px) {
+      .cs-hero-grid { grid-template-columns: 1fr; gap: 2rem; }
+    }
+
+    @media (max-width: 768px) {
+      .cs-details-bar { grid-template-columns: 1fr 1fr; }
+      .cs-image-half { grid-template-columns: 1fr; }
+      .cs-outcome-grid { grid-template-columns: 1fr; }
+    }
+
+    .cs-type-pills { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+    .cs-pill { display: inline-block; padding: 0.25rem 0.75rem; border-radius: 999px; border: 1px solid var(--border); font-size: 0.95rem; font-weight: 500; color: var(--text-muted); background: var(--bg-alt); white-space: nowrap; }
+
+    .cs-section-grid { display: grid; grid-template-columns: 3fr 7fr; gap: 3rem; margin-bottom: 5rem; }
+    .cs-section-heading h2 { font-size: 2.25rem; margin: 0; position: sticky; top: calc(var(--nav-h) + 2rem); }
+    .cs-section-body > *:first-child { margin-top: 0; }
+    @media (max-width: 768px) { .cs-section-grid { grid-template-columns: 1fr; gap: 0.75rem; } }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Peter Chang</a>
+            <ul class="nav-links">
+        <li><a href="work.html">Work</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="https://www.linkedin.com/in/peter-chang-4aa02450" target="_blank" rel="noopener">LinkedIn</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- CASE STUDY HERO -->
+  <section class="cs-hero">
+    <div class="container">
+      <h1 class="cs-title">Reimagining the Match Experience</h1>
+
+      <div class="cs-hero-grid">
+        <div class="cs-hero-left">
+          <p class="cs-subtitle">
+        How we redesigned core matching flows across Match Group's flagship products — reducing decision fatigue, increasing trust, and improving meaningful connection rates.
+      </p>
+        </div>
+                <div class="cs-hero-right">
+          <div class="cs-details-bar">
+            <div>
+              <div class="cs-detail-label">My Role</div>
+              <div class="cs-detail-val">Design Director</div>
+            </div>
+            <div>
+              <div class="cs-detail-label">Team</div>
+              <div class="cs-detail-val">6 designers, 2 researchers</div>
+            </div>
+            <div>
+              <div class="cs-detail-label">Type</div>
+              <div class="cs-detail-val">iOS, Android, Web</div>
+            </div>
+            <div>
+              <div class="cs-detail-label">Date</div>
+              <div class="cs-detail-val"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+  </section>
+
+  <!-- HERO IMAGE -->
+  <div class="container">
+    <div class="cs-image-full thumb-blue">
+      <!-- Replace with: <img src="images/cs1-hero.png" alt="Match experience redesign" /> -->
+      <span>📱 Add your hero image or mockup here (16:7 ratio recommended)</span>
+    </div>
+  </div>
+
+  <!-- BODY CONTENT -->
+  <section style="padding: 5rem 0 100px;">
+    <div class="container">
+      <div class="cs-content">
+
+        <h2>Context</h2>
+                <p>
+          Example: <strong>Users were spending more time swiping than connecting.</strong> Research showed that the average user made hundreds of quick decisions per session, but follow-through to meaningful conversation was low and declining. The matching experience had accumulated years of incremental feature additions without a cohesive vision.
+        </p>
+
+        <div class="cs-callout">
+          "I keep matching with people but never actually talk to them." — User interview participant
+        </div>
+
+        <h2>Discovery &amp; research</h2>
+        
+        <div class="cs-image-half">
+          <div class="cs-img-placeholder">Research artifacts / affinity map</div>
+          <div class="cs-img-placeholder">Journey map or insight board</div>
+        </div>
+
+        <h2>The approach</h2>
+                
+        <div class="cs-image-full" style="margin: 2rem 0; aspect-ratio: 16/8; background: var(--bg-alt);">
+          <span style="font-size:0.875rem; color:var(--text-subtle);">Wireframes / explorations / sketches</span>
+        </div>
+
+        <h2>The solution</h2>
+        
+        <div class="cs-image-half">
+          <div class="cs-img-placeholder">Before screen</div>
+          <div class="cs-img-placeholder">After screen</div>
+        </div>
+
+        <h2>Outcomes</h2>
+                    
+          </div>
+            
+          </div>
+            
+          </div>
+        </div>
+
+        <h2>What I learned</h2>
+        
+      </div>
+
+      <!-- Bottom nav -->
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Peter Chang. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
