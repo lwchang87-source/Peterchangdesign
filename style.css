@@ -297,7 +297,7 @@ nav:not(.nav-hidden) {
 }
 
 .hero-sub {
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   color: var(--text-muted);
   line-height: 1.7;
   margin-bottom: 0;
@@ -690,7 +690,7 @@ nav:not(.nav-hidden) {
 }
 
 .project-desc {
-  font-size: 0.9rem;
+  font-size: 0.75rem;
   color: var(--text-muted);
   line-height: 1.5;
   width: 90%;
