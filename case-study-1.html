@@ -8,10 +8,11 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600&family=Raleway:ital,wght@0,400;0,500;0,600;0,700;0,900;1,900&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="style.css" />
   <style>
+    :root { --font-sans: 'Raleway', system-ui, sans-serif; --font-serif: 'Raleway', system-ui, sans-serif; }
     .cs-hero {
       padding-top: calc(var(--nav-h) + 60px);
       padding-bottom: 80px;
@@ -110,10 +111,10 @@
     }
 
     .cs-content p {
-      font-size: 1.15rem;
+      font-size: 1rem;
       color: var(--text-muted);
-      line-height: 1.8;
-      margin-bottom: 1.25rem;
+      line-height: 1.6;
+      margin-bottom: 1rem;
     }
 
     .cs-content p strong {
@@ -130,7 +131,7 @@
       font-size: 1.05rem;
       color: var(--text);
       font-style: italic;
-      font-family: var(--font-serif);
+      font-family: var(--font-display);
       line-height: 1.6;
     }
 
@@ -169,7 +170,7 @@
     }
 
     .cs-outcome-num {
-      font-family: var(--font-serif);
+      font-family: var(--font-display);
       font-size: 2.25rem;
       color: var(--accent);
       line-height: 1;
@@ -243,9 +244,9 @@
   <!-- CASE STUDY HERO -->
   <section class="cs-hero">
     <div class="container">
-      <h1 class="cs-title">Reimagining the Match Experience</h1>
+      <h1 class="cs-title reveal">Reimagining the Match Experience</h1>
 
-      <div class="cs-hero-grid">
+      <div class="cs-hero-grid reveal reveal-delay-1">
         <div class="cs-hero-left">
           <p class="cs-subtitle">
         How we redesigned core matching flows across Match Group's flagship products — reducing decision fatigue, increasing trust, and improving meaningful connection rates.
@@ -306,7 +307,7 @@
 
         <h2>The approach</h2>
                 
-        <div class="cs-image-full" style="margin: 2rem 0; aspect-ratio: 16/8; background: var(--bg-alt);">
+        <div class="cs-image-full reveal" style="margin: 2rem 0; aspect-ratio: 16/8; background: var(--bg-alt);">
           <span style="font-size:0.875rem; color:var(--text-subtle);">Wireframes / explorations / sketches</span>
         </div>
 

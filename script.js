@@ -196,4 +196,46 @@ document.addEventListener('DOMContentLoaded', () => {
     counterObserver.observe(metricsRow);
   }
 
+  /* --- Count-up for case study impact/outcome numbers ------- */
+  function animateCsCount(el, duration) {
+    // Extract numeric value from text nodes only (ignore prefix/suffix spans)
+    let numText = '';
+    el.childNodes.forEach(node => {
+      if (node.nodeType === Node.TEXT_NODE) numText += node.textContent.trim();
+    });
+    const cleaned = numText.replace(/,/g, '');
+    const target = parseFloat(cleaned);
+    if (!target) return;
+
+    const isDecimal = cleaned.includes('.');
+    const decimals  = isDecimal ? (cleaned.split('.')[1] || '').length : 0;
+    const textNodes = Array.from(el.childNodes).filter(n => n.nodeType === Node.TEXT_NODE);
+    const start = performance.now();
+
+    function tick(now) {
+      const elapsed  = now - start;
+      const progress = Math.min(elapsed / duration, 1);
+      const eased    = 1 - Math.pow(1 - progress, 3);
+      const current  = eased * target;
+      const formatted = isDecimal
+        ? current.toFixed(decimals)
+        : Math.round(current).toLocaleString();
+      textNodes.forEach(node => { node.textContent = formatted; });
+      if (progress < 1) requestAnimationFrame(tick);
+    }
+
+    requestAnimationFrame(tick);
+  }
+
+  document.querySelectorAll('.cs-impact-cards, .cs-outcome-grid').forEach(container => {
+    const impactObserver = new IntersectionObserver((entries) => {
+      if (!entries[0].isIntersecting) return;
+      impactObserver.unobserve(container);
+      container.querySelectorAll('.cs-impact-num, .cs-outcome-num').forEach(el => {
+        animateCsCount(el, 1400);
+      });
+    }, { threshold: 0.2 });
+    impactObserver.observe(container);
+  });
+
 });
