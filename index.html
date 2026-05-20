@@ -9,7 +9,7 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600&family=Raleway:ital,wght@0,400;0,500;0,600;0,700;0,900;1,900&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -20,13 +20,15 @@
   ====================================================== -->
   <nav>
     <div class="nav-inner">
-      <a href="#hero" class="nav-logo">Peter Chang</a>
+      <a href="#work" class="nav-logo">Peter Chang</a>
 
       <ul class="nav-links">
         <li><a href="work.html">Work</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="https://www.linkedin.com/in/peter-chang-4aa02450" target="_blank" rel="noopener">LinkedIn</a></li>
       </ul>
+
+      <a href="#contact" class="nav-contact">Contact</a>
 
       <button class="nav-toggle" aria-label="Toggle menu">
         <span></span>
@@ -40,252 +42,238 @@
        HERO + WORK
   ====================================================== -->
   <section id="work">
-    <div class="container">
-      <div class="hero-grid">
-        <h1 class="hero-title">
-          <span>Purposeful design</span>
-          <span>at global scale.</span>
-        </h1>
-        <div class="hero-sub-row">
-          <img src="Assets/peter.jpg" alt="Peter Chang" class="hero-avatar" />
-          <p class="hero-sub">
-            <span class="hero-sub-line">Design leader @ OkCupid, Warner Bros., MTV and more</span><br>
-            Currently based in NYC, New York.
-          </p>
+
+    <!-- Hero with video background -->
+    <div class="hero-wrap">
+      <div class="hero-bg">
+        <div class="hero-carousel">
+          <div class="hero-slide"><img src="Assets/1 column 1_Archer design system.png" alt="" aria-hidden="true" /></div>
+          <div class="hero-slide"><img src="Assets/1 column 1_Bullseye.png"              alt="" aria-hidden="true" /></div>
+          <div class="hero-slide"><img src="Assets/1 column 1_Status.png"                alt="" aria-hidden="true" /></div>
+          <div class="hero-slide"><img src="Assets/1 column 1_Trophies.png"              alt="" aria-hidden="true" /></div>
+          <div class="hero-slide"><img src="Assets/1 column 2_Bullseye.png"              alt="" aria-hidden="true" /></div>
+          <div class="hero-slide"><img src="Assets/1 column 2_Trophies.png"              alt="" aria-hidden="true" /></div>
+          <div class="hero-slide"><img src="Assets/1 column 3_Rebranding with AI.png"   alt="" aria-hidden="true" /></div>
+          <div class="hero-slide"><img src="Assets/1 column 4_Rebranding with AI.png"   alt="" aria-hidden="true" /></div>
         </div>
+        <div class="hero-bg-overlay"></div>
+        <video class="hero-video" autoplay muted loop playsinline>
+          <!-- <source src="your-video.mp4" type="video/mp4"> -->
+        </video>
       </div>
+      <div class="hero-corner-mask"></div>
+      <div class="container hero-content">
 
-      <div class="work-brands">
-
-        <!-- ── Archer ── -->
-        <div class="brand-section">
-          <div class="brand-section-label">Archer</div>
-          <div class="cards-track-wrap">
-            <div class="cards-track">
-
-              <a href="archer-maps.html" class="project-card">
-                <div class="project-thumb"><img src="Assets/Homepage_card_maps.png" alt="Maps" /></div>
-                <div class="project-body">
-                  <h4 class="project-title">Maps</h4>
-                  <p class="project-desc">Location-based layer for proximity-driven user discovery.</p>
-                </div>
-              </a>
-
-              <a href="archer-trophies.html" class="project-card">
-                <div class="project-thumb"><img src="Assets/Homepage_card_Trophies.png" alt="Trophies" /></div>
-                <div class="project-body">
-                  <h4 class="project-title">Trophies</h4>
-                  <p class="project-desc">Behavioral achievement system that signals user identity and intent.</p>
-                </div>
-              </a>
-
-              <a href="archer-status.html" class="project-card">
-                <div class="project-thumb"><img src="Assets/Homepage_card_Status.png" alt="Status" /></div>
-                <div class="project-body">
-                  <h4 class="project-title">Status</h4>
-                  <p class="project-desc">Real-time presence broadcast to relevant matches.</p>
-                </div>
-              </a>
-
-              <a href="archer-design-system.html" class="project-card">
-                <div class="project-thumb"><img src="Assets/Homepage_card_Design system.png" alt="Design system" /></div>
-                <div class="project-body">
-                  <h4 class="project-title">Design System</h4>
-                  <p class="project-desc">Built functional product design system for Archer.</p>
-                </div>
-              </a>
-
-              <a href="archer-bullseye.html" class="project-card">
-                <div class="project-thumb"><img src="Assets/Homepage_card_bullseye.png" alt="Bullseye AI" /></div>
-                <div class="project-body">
-                  <h4 class="project-title">Bullseye AI</h4>
-                  <p class="project-desc">Engine that infers attraction preferences from photos.</p>
-                </div>
-              </a>
-
-            </div>
-          </div>
+        <!-- Row 1: titles + CTA -->
+        <h1 class="hero-title">Purposeful<br>design.</h1>
+        <h1 class="hero-title">Global<br>scale.</h1>
+        <div class="hero-cta">
+          <a href="https://www.linkedin.com/in/peter-chang-4aa02450" target="_blank" rel="noopener" class="hero-btn hero-btn--primary">
+            <svg width="15" height="15" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/></svg>
+            LinkedIn
+          </a>
+          <a href="mailto:lwchang87@gmail.com" class="hero-btn hero-btn--ghost">
+            <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true"><rect x="1" y="3" width="14" height="10" rx="2" stroke="currentColor" stroke-width="1.4"/><path d="M1 5l7 5 7-5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+            Email
+          </a>
         </div>
 
-        <!-- ── OkCupid ── -->
-        <div class="brand-section">
-          <div class="brand-section-label">OkCupid</div>
-          <div class="cards-track-wrap">
-            <div class="cards-track">
-
-              <a href="okc-cbm.html" class="project-card">
-                <div class="project-thumb"><img src="Assets/Homepage_card_CBM.png" alt="Compatibility based matching" /></div>
-                <div class="project-body">
-                  <h4 class="project-title">Compatibility Based Matching</h4>
-                  <p class="project-desc">Create meaningful connections with deeper insights of users.</p>
-                </div>
-              </a>
-
-              <a href="okc-rebranding-ai.html" class="project-card">
-                <div class="project-thumb"><img src="Assets/Homepage_card_Rebranding.png" alt="Rebranding with AI" /></div>
-                <div class="project-body">
-                  <h4 class="project-title">Rebranding with AI</h4>
-                  <p class="project-desc">Modernize OkCupid brand and UI catering to new vision and target audience.</p>
-                </div>
-              </a>
-
-              <a href="okc-premium-plus.html" class="project-card">
-                <div class="project-thumb"><img src="Assets/Homepage_card_Premium plus.png" alt="Superlikes" /></div>
-                <div class="project-body">
-                  <h4 class="project-title">Premium Plus</h4>
-                  <p class="project-desc">New subscription tier that streamline OkCupid monetization with precision.</p>
-                </div>
-              </a>
-
-              <a href="okc-stacks.html" class="project-card">
-                <div class="project-thumb"><img src="Assets/Homepage_card_Stacks.png" alt="Stacks" /></div>
-                <div class="project-body">
-                  <h4 class="project-title">Stacks</h4>
-                  <p class="project-desc">Discovery in cohorts that help people connect intentionally with context.</p>
-                </div>
-              </a>
-
-            </div>
+        <!-- Row 2: subtitle + metrics (all top-aligned at same y) -->
+        <p class="hero-sub">
+          <span>Design @ OkCupid, Warner Bros., MTV and more</span><br>
+          Currently based in NYC, New York.
+        </p>
+        <div class="hero-metrics">
+          <div class="hero-metric">
+            <span class="hero-metric-num">15</span>
+            <span class="hero-metric-label">Designers led directly &amp; indirectly</span>
+          </div>
+          <div class="hero-metric">
+            <span class="hero-metric-num">97%</span>
+            <span class="hero-metric-label">Team retention over 7 years</span>
+          </div>
+          <div class="hero-metric">
+            <span class="hero-metric-num">4</span>
+            <span class="hero-metric-label">Global brand products managed simultaneously</span>
           </div>
         </div>
-
-        <!-- ── Management ── -->
-        <div class="brand-section">
-          <div class="brand-section-label">Design Management</div>
-          <div class="cards-track-wrap">
-            <div class="cards-track">
-
-              <a href="mgmt-design-quality.html" class="project-card">
-                <div class="project-thumb"><img src="Assets/Homepage_card_Design Quality Evaluation.png" alt="Design quality evaluation at Match Group" /></div>
-                <div class="project-body">
-                  <h4 class="project-title">Design Quality Evaluation</h4>
-                  <p class="project-desc">Evaluate existing brand products and create optimization strategy.</p>
-                </div>
-              </a>
-
-              <a href="mgmt-central-ds.html" class="project-card">
-                <div class="project-thumb"><img src="Assets/Homepage_card_Central Design System.png" alt="Central Design System" /></div>
-                <div class="project-body">
-                  <h4 class="project-title">Central Design System</h4>
-                  <p class="project-desc">Strategy to efficiently facilitate a multi-brand portfolio organization.</p>
-                </div>
-              </a>
-
-              <a href="mgmt-scaling-design.html" class="project-card">
-                <div class="project-thumb"><img src="Assets/Homepage_card_Scaling Design Process.png" alt="Scaling Design Process" /></div>
-                <div class="project-body">
-                  <h4 class="project-title">Scaling Design Process</h4>
-                  <p class="project-desc">Streamline design process and roles for all teams and stakeholders at Match E&amp;E Brands.</p>
-                </div>
-              </a>
-
-              <a href="mgmt-azar-us.html" class="project-card">
-                <div class="project-thumb"><img src="Assets/Homepage_card_Azar Consultation for US.png" alt="Azar Consultation for US market" /></div>
-                <div class="project-body">
-                  <h4 class="project-title">Azar Consultation for US market</h4>
-                  <p class="project-desc">Consulting on Azar's product experience and design strategy for the US market.</p>
-                </div>
-              </a>
-
-            </div>
+        <div class="hero-metrics">
+          <div class="hero-metric">
+            <span class="hero-metric-num">100+</span>
+            <span class="hero-metric-label">Total product features launched</span>
           </div>
-        </div>
-
-        <!-- Hidden brand sections -->
-        <div id="moreBrands" class="more-brands-hidden">
-
-          <!-- ── Warner Brothers ── -->
-          <div class="brand-section" style="display:none;">
-            <div class="brand-section-label">Warner Brothers</div>
-            <div class="cards-track-wrap">
-              <div class="cards-track">
-
-                <a href="wb-mydc.html" class="project-card">
-                  <div class="project-thumb"><img src="https://picsum.photos/seed/wbmydc/360/360" alt="DC Universe: My DC" /></div>
-                  <div class="project-body">
-                    <h4 class="project-title">DC Universe: My DC</h4>
-                    <p class="project-desc">[ One-line description ]</p>
-                  </div>
-                </a>
-
-                <a href="wb-subscription.html" class="project-card">
-                  <div class="project-thumb"><img src="https://picsum.photos/seed/wbsub/360/360" alt="DC Universe: Subscription & ALC" /></div>
-                  <div class="project-body">
-                    <h4 class="project-title">DC Universe: Subscription &amp; ALC</h4>
-                    <p class="project-desc">[ One-line description ]</p>
-                  </div>
-                </a>
-
-              </div>
-            </div>
+          <div class="hero-metric">
+            <span class="hero-metric-num">5</span>
+            <span class="hero-metric-label">International Awards winning</span>
           </div>
-
-          <!-- ── Viacom ── -->
-          <div class="brand-section" style="display:none;">
-            <div class="brand-section-label">Viacom</div>
-            <div class="cards-track-wrap">
-              <div class="cards-track">
-
-                <a href="viacom-events.html" class="project-card">
-                  <div class="project-thumb"><img src="https://picsum.photos/seed/viacomvma/360/360" alt="Events platform: VMAs, EMAs" /></div>
-                  <div class="project-body">
-                    <h4 class="project-title">Events Platform: VMAs, EMAs</h4>
-                    <p class="project-desc">[ One-line description ]</p>
-                  </div>
-                </a>
-
-                <a href="viacom-ema-voting.html" class="project-card">
-                  <div class="project-thumb"><img src="https://picsum.photos/seed/emavote/360/360" alt="EMA Voting platform" /></div>
-                  <div class="project-body">
-                    <h4 class="project-title">EMA Voting Platform</h4>
-                    <p class="project-desc">[ One-line description ]</p>
-                  </div>
-                </a>
-
-              </div>
-            </div>
-          </div>
-
-          <!-- ── The Science Project ── -->
-          <div class="brand-section" style="display:none;">
-            <div class="brand-section-label">The Science Project</div>
-            <div class="cards-track-wrap">
-              <div class="cards-track">
-
-                <a href="tsp-bloomingdales.html" class="project-card">
-                  <div class="project-thumb"><img src="https://picsum.photos/seed/bloomwin/360/360" alt="Bloomingdale's Holiday Window" /></div>
-                  <div class="project-body">
-                    <h4 class="project-title">Bloomingdale's Holiday Window</h4>
-                    <p class="project-desc">[ One-line description ]</p>
-                  </div>
-                </a>
-
-                <a href="tsp-uniqlo.html" class="project-card">
-                  <div class="project-thumb"><img src="https://picsum.photos/seed/uniqlodig/360/360" alt="Uniqlo Digital Assistant" /></div>
-                  <div class="project-body">
-                    <h4 class="project-title">Uniqlo Digital Assistant</h4>
-                    <p class="project-desc">[ One-line description ]</p>
-                  </div>
-                </a>
-
-              </div>
-            </div>
-          </div>
-
-        </div><!-- /moreBrands -->
-
-        <!-- See more button -->
-        <div class="see-more-wrap" style="display:none;">
-          <button class="see-more-btn" id="seeMoreBtn" aria-expanded="false">
-            See more
-            <svg class="see-more-icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
-              <path d="M3 6l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </button>
         </div>
 
       </div>
     </div>
+
+    <!-- Work cards -->
+    <div class="work-section">
+      <div class="container">
+        <div class="work-header reveal">
+          <h2 class="work-heading">Recent Work</h2>
+          <div class="filter-tabs">
+            <button class="filter-tab active" data-filter="all">All</button>
+            <button class="filter-tab" data-filter="product-design">Product Design</button>
+            <button class="filter-tab" data-filter="management">Management</button>
+            <button class="filter-tab" data-filter="design-system">Design System</button>
+          </div>
+        </div>
+
+        <div class="cards-grid">
+
+          <a href="archer-maps.html" class="project-card reveal" data-category="product-design">
+            <div class="project-thumb">
+              <img src="Assets/Homepage_card_maps.png" alt="Maps" />
+              <span class="card-tag card-tag--brand">Archer</span>
+              <span class="card-tag card-tag--category">Product design</span>
+            </div>
+            <div class="project-body">
+              <h4 class="project-title">Maps</h4>
+              <p class="project-desc">Location-based layer for proximity-driven user discovery.</p>
+            </div>
+          </a>
+
+          <a href="archer-trophies.html" class="project-card reveal" data-category="product-design">
+            <div class="project-thumb">
+              <img src="Assets/Homepage_card_Trophies.png" alt="Trophies" />
+              <span class="card-tag card-tag--brand">Archer</span>
+              <span class="card-tag card-tag--category">Product design</span>
+            </div>
+            <div class="project-body">
+              <h4 class="project-title">Trophies</h4>
+              <p class="project-desc">Behavioral achievement system that signals user identity and intent.</p>
+            </div>
+          </a>
+
+          <a href="archer-status.html" class="project-card reveal" data-category="product-design">
+            <div class="project-thumb">
+              <img src="Assets/Homepage_card_Status.png" alt="Status" />
+              <span class="card-tag card-tag--brand">Archer</span>
+              <span class="card-tag card-tag--category">Product design</span>
+            </div>
+            <div class="project-body">
+              <h4 class="project-title">Status</h4>
+              <p class="project-desc">Real-time presence broadcast to relevant matches.</p>
+            </div>
+          </a>
+
+          <a href="archer-design-system.html" class="project-card reveal" data-category="design-system">
+            <div class="project-thumb">
+              <img src="Assets/Homepage_card_Design system.png" alt="Design System" />
+              <span class="card-tag card-tag--brand">Archer</span>
+              <span class="card-tag card-tag--category">Design system</span>
+            </div>
+            <div class="project-body">
+              <h4 class="project-title">Design System</h4>
+              <p class="project-desc">Built functional product design system for Archer.</p>
+            </div>
+          </a>
+
+          <a href="okc-cbm.html" class="project-card reveal" data-category="product-design">
+            <div class="project-thumb">
+              <img src="Assets/Homepage_card_CBM.png" alt="Compatibility Based Matching" />
+              <span class="card-tag card-tag--brand">OkCupid</span>
+              <span class="card-tag card-tag--category">Product design</span>
+            </div>
+            <div class="project-body">
+              <h4 class="project-title">Compatibility Based Matching</h4>
+              <p class="project-desc">Create meaningful connections with deeper insights of users.</p>
+            </div>
+          </a>
+
+          <a href="okc-rebranding-ai.html" class="project-card reveal" data-category="design-system">
+            <div class="project-thumb">
+              <img src="Assets/Homepage_card_Rebranding.png" alt="Rebranding with AI" />
+              <span class="card-tag card-tag--brand">OkCupid</span>
+              <span class="card-tag card-tag--category">Design system</span>
+            </div>
+            <div class="project-body">
+              <h4 class="project-title">Rebranding with AI</h4>
+              <p class="project-desc">Modernize OkCupid brand and UI catering to new vision and target audience.</p>
+            </div>
+          </a>
+
+          <a href="okc-premium-plus.html" class="project-card reveal" data-category="product-design">
+            <div class="project-thumb">
+              <img src="Assets/Homepage_card_Premium plus.png" alt="Premium Plus" />
+              <span class="card-tag card-tag--brand">OkCupid</span>
+              <span class="card-tag card-tag--category">Product design</span>
+            </div>
+            <div class="project-body">
+              <h4 class="project-title">Premium Plus</h4>
+              <p class="project-desc">New subscription tier that streamline OkCupid monetization with precision.</p>
+            </div>
+          </a>
+
+          <a href="okc-stacks.html" class="project-card reveal" data-category="product-design">
+            <div class="project-thumb">
+              <img src="Assets/Homepage_card_Stacks.png" alt="Stacks" />
+              <span class="card-tag card-tag--brand">OkCupid</span>
+              <span class="card-tag card-tag--category">Product design</span>
+            </div>
+            <div class="project-body">
+              <h4 class="project-title">Stacks</h4>
+              <p class="project-desc">Discovery in cohorts that help people connect intentionally with context.</p>
+            </div>
+          </a>
+
+          <a href="mgmt-design-quality.html" class="project-card reveal" data-category="management">
+            <div class="project-thumb">
+              <img src="Assets/Homepage_card_Design Quality Evaluation.png" alt="Design Quality Evaluation" />
+              <span class="card-tag card-tag--brand">Match Group</span>
+              <span class="card-tag card-tag--category">Management</span>
+            </div>
+            <div class="project-body">
+              <h4 class="project-title">Design Quality Evaluation</h4>
+              <p class="project-desc">Evaluate existing brand products and create optimization strategy.</p>
+            </div>
+          </a>
+
+          <a href="mgmt-central-ds.html" class="project-card reveal" data-category="management">
+            <div class="project-thumb">
+              <img src="Assets/Homepage_card_Central Design System.png" alt="Central Design System" />
+              <span class="card-tag card-tag--brand">Match Group</span>
+              <span class="card-tag card-tag--category">Management</span>
+            </div>
+            <div class="project-body">
+              <h4 class="project-title">Central Design System</h4>
+              <p class="project-desc">Strategy to efficiently facilitate a multi-brand portfolio organization.</p>
+            </div>
+          </a>
+
+          <a href="mgmt-scaling-design.html" class="project-card reveal" data-category="management">
+            <div class="project-thumb">
+              <img src="Assets/Homepage_card_Scaling Design Process.png" alt="Scaling Design Process" />
+              <span class="card-tag card-tag--brand">Match Group</span>
+              <span class="card-tag card-tag--category">Management</span>
+            </div>
+            <div class="project-body">
+              <h4 class="project-title">Scaling Design Process</h4>
+              <p class="project-desc">Streamline design process and roles for all teams and stakeholders at Match E&amp;E Brands.</p>
+            </div>
+          </a>
+
+          <a href="mgmt-azar-us.html" class="project-card reveal" data-category="management">
+            <div class="project-thumb">
+              <img src="Assets/Homepage_card_Azar Consultation for US.png" alt="Azar Consultation for US market" />
+              <span class="card-tag card-tag--brand">Match Group</span>
+              <span class="card-tag card-tag--category">Management</span>
+            </div>
+            <div class="project-body">
+              <h4 class="project-title">Azar Consultation for US market</h4>
+              <p class="project-desc">Consulting on Azar's product experience and design strategy for the US market.</p>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </div>
+
   </section>
 
   <!-- ======================================================
@@ -300,13 +288,121 @@
         </div>
 
         <div class="about-text reveal reveal-delay-1">
-          <h2 class="about-headline">I lead design at the intersection of <em>human behavior, product strategy, and craft.</em></h2>
+          <h2 class="about-headline">I lead design at the intersection of human behavior, product strategy, and craft.</h2>
           <p>
-            I'm Peter, a Design Director at <strong>Match Group</strong> where I lead design across some of the world's most-used connection products. I came up through product design — years in the weeds of flows, prototypes, and research — before moving into leadership. That background shapes how I manage: I care deeply about craft, stay close to the work, and believe the best design leaders are still great designers.
+            I'm Peter, a Design Director at Match Group where I lead design across some of the world's most-used connection products. I came up through product design — years in the weeds of flows, prototypes, and research — before moving into leadership. That background shapes how I manage: I care deeply about craft, stay close to the work, and believe the best design leaders are still great designers.
           </p>
           <p>
             Outside of work, I'm drawn to architecture, typography, and the kind of product writing that makes complex things feel obvious.
           </p>
+          <div class="about-actions">
+            <a href="https://www.linkedin.com/in/peter-chang-4aa02450" target="_blank" rel="noopener" class="about-btn about-btn--primary">
+              <svg width="15" height="15" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/></svg>
+              LinkedIn
+            </a>
+            <a href="mailto:lwchang87@gmail.com" class="about-btn about-btn--ghost">
+              <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true"><rect x="1" y="3" width="14" height="10" rx="2" stroke="currentColor" stroke-width="1.4"/><path d="M1 5l7 5 7-5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+              Email
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       DESIGN LEADERSHIP
+  ====================================================== -->
+  <section id="leadership">
+    <div class="container">
+      <div class="leadership-split reveal">
+        <h2 class="leadership-heading">Leadership</h2>
+        <div class="leadership-intro">
+          <p>Great design leadership isn't about taste — it's about creating the conditions where talented people can do their best work. I focus on building psychological safety, clear craft standards, and decision-making processes that scale.</p>
+          <p>At Match Group, I've led multi-disciplinary design teams across product, research, and content design — partnering closely with engineering, product management, and data science to drive outcomes that matter.</p>
+        </div>
+      </div>
+
+      <div class="metrics-row reveal reveal-delay-1">
+        <div class="metric">
+          <div class="metric-num" data-count="15">15</div>
+          <div class="metric-label">Designers led directly &amp; indirectly</div>
+        </div>
+        <div class="metric">
+          <div class="metric-num" data-count="97">97<span class="metric-unit">%</span></div>
+          <div class="metric-label">Team retention over 7 years</div>
+        </div>
+        <div class="metric">
+          <div class="metric-num" data-count="4">4</div>
+          <div class="metric-label">Global brand products managed simultaneously</div>
+        </div>
+        <div class="metric">
+          <div class="metric-num" data-count="100">100<span class="metric-unit">+</span></div>
+          <div class="metric-label">Total product features launched</div>
+        </div>
+        <div class="metric">
+          <div class="metric-num" data-count="5">5</div>
+          <div class="metric-label">International Awards winning</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       APPROACH / PHILOSOPHY
+  ====================================================== -->
+  <section id="approach">
+    <div class="container">
+      <h2 class="section-heading reveal" style="margin-bottom:3.75rem;">Philosophy</h2>
+      <div class="approach-grid">
+
+        <div class="approach-item reveal">
+          <span class="approach-num">01</span>
+          <div>
+            <strong>Research first.</strong>
+            I make decisions grounded in user behavior and data — not assumptions or personal taste.
+          </div>
+        </div>
+
+        <div class="approach-item reveal reveal-delay-1">
+          <span class="approach-num">02</span>
+          <div>
+            <strong>Systems thinking.</strong>
+            Every feature I design considers how it fits into the larger product, brand, and design ecosystem.
+          </div>
+        </div>
+
+        <div class="approach-item reveal reveal-delay-2">
+          <span class="approach-num">03</span>
+          <div>
+            <strong>Craft matters.</strong>
+            I hold high standards for visual and interaction quality. The details aren't optional — they're the product.
+          </div>
+        </div>
+
+        <div class="approach-item reveal">
+          <span class="approach-num">04</span>
+          <div>
+            <strong>Ship and learn.</strong>
+            I favor tangible work in front of users over lengthy internal documents that go unread.
+          </div>
+        </div>
+
+        <div class="approach-item reveal reveal-delay-1">
+          <span class="approach-num">05</span>
+          <div>
+            <strong>Build the team.</strong>
+            Great design at scale comes from great designers. I invest in people as much as I invest in pixels.
+          </div>
+        </div>
+
+        <div class="approach-item reveal reveal-delay-2">
+          <span class="approach-num">06</span>
+          <div>
+            <strong>Design is communication.</strong>
+            Clear artifacts, frequent sharing, and direct feedback loops keep everyone aligned and moving.
+          </div>
         </div>
 
       </div>
@@ -337,263 +433,41 @@
   </section>
 
   <!-- ======================================================
-       APPROACH
-  ====================================================== -->
-  <section id="approach">
-    <div class="container">
-      <p class="label reveal" style="margin-bottom:2rem;">Philosophy</p>
-      <div class="approach-grid">
-
-        <div class="approach-item reveal">
-          <span class="approach-num">01</span>
-          <div>
-            <strong>Research first.</strong> I make decisions grounded in user behavior and data — not assumptions or personal taste.
-          </div>
-        </div>
-
-        <div class="approach-item reveal reveal-delay-1">
-          <span class="approach-num">02</span>
-          <div>
-            <strong>Systems thinking.</strong> Every feature I design considers how it fits into the larger product, brand, and design ecosystem.
-          </div>
-        </div>
-
-        <div class="approach-item reveal reveal-delay-2">
-          <span class="approach-num">03</span>
-          <div>
-            <strong>Craft matters.</strong> I hold high standards for visual and interaction quality. The details aren't optional — they're the product.
-          </div>
-        </div>
-
-        <div class="approach-item reveal">
-          <span class="approach-num">04</span>
-          <div>
-            <strong>Ship and learn.</strong> I favor tangible work in front of users over lengthy internal documents that go unread.
-          </div>
-        </div>
-
-        <div class="approach-item reveal reveal-delay-1">
-          <span class="approach-num">05</span>
-          <div>
-            <strong>Build the team.</strong> Great design at scale comes from great designers. I invest in people as much as I invest in pixels.
-          </div>
-        </div>
-
-        <div class="approach-item reveal reveal-delay-2">
-          <span class="approach-num">06</span>
-          <div>
-            <strong>Design is communication.</strong> Clear artifacts, frequent sharing, and direct feedback loops keep everyone aligned and moving.
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-
-
-    <!-- ======================================================
-       CLIENTS
+       CLIENTS / PRODUCTS SHIPPED
   ====================================================== -->
   <section id="clients">
     <div class="container">
-      <p class="label reveal" style="margin-bottom:2rem;">Products shipped</p>
+      <h2 class="section-heading reveal" style="margin-bottom:3rem;">Products shipped</h2>
     </div>
-    <div class="clients-track-wrap">
+    <div class="clients-marquee">
       <div class="clients-track">
-
-
-        <div class="client-logo">
-          <img src="Assets/ARCHER_WORDMARK_RGB_BLACK.svg" alt="Archer" />
-        </div>
-
-        <div class="client-logo">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/2/25/OkCupid_logo.svg" alt="OkCupid" />
-        </div>
-
-        <div class="client-logo">
-          <img src="Assets/Viacom_logo.svg" alt="Viacom" />
-        </div>
-
-        <div class="client-logo">
-          <svg viewBox="0 0 230 44" xmlns="http://www.w3.org/2000/svg" aria-label="Warner Bros."><text x="0" y="34" font-family="Georgia,'Times New Roman',serif" font-size="30" font-weight="700" fill="#000" letter-spacing="-0.5">Warner Bros.</text></svg>
-        </div>
-
-        <div class="client-logo">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/7/76/MTV_Logo.svg" alt="MTV" />
-        </div>
-
-        <div class="client-logo">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/c/c6/Comedy_Central_2011_Logo.svg" alt="Comedy Central" />
-        </div>
-
-        <div class="client-logo">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/0/02/CMT_logo.svg" alt="CMT" />
-        </div>
-
-        <div class="client-logo">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/4/47/VH1_logo.svg" alt="VH1" />
-        </div>
-
-        <div class="client-logo">
-          <img src="Assets/Logo_TV.svg" alt="Logo TV" />
-        </div>
-
-        <div class="client-logo">
-          <svg viewBox="0 0 185 44" xmlns="http://www.w3.org/2000/svg" aria-label="Uniqlo"><text x="0" y="36" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="36" font-weight="900" letter-spacing="1" fill="#000">UNIQLO</text></svg>
-        </div>
-
-        <div class="client-logo">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/6/68/Bloomingdale's_Logo.svg" alt="Bloomingdale's" />
-        </div>
-
-        <div class="client-logo">
-          <svg viewBox="0 0 195 56" xmlns="http://www.w3.org/2000/svg" aria-label="Perry Ellis"><text x="97" y="38" text-anchor="middle" font-family="Georgia, serif" font-size="20" fill="#6B6B6B" letter-spacing="3">PERRY ELLIS</text></svg>
-        </div>
-
-        <div class="client-logo">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/e/e2/Calvin_klein_logo.svg" alt="Calvin Klein" />
-        </div>
-
-        <!-- ── duplicates for seamless loop ── -->
-
-
-        <div class="client-logo">
-          <img src="Assets/ARCHER_WORDMARK_RGB_BLACK.svg" alt="Archer" />
-        </div>
-
-        <div class="client-logo">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/2/25/OkCupid_logo.svg" alt="OkCupid" />
-        </div>
-
-        <div class="client-logo">
-          <img src="Assets/Viacom_logo.svg" alt="Viacom" />
-        </div>
-
-        <div class="client-logo">
-          <svg viewBox="0 0 230 44" xmlns="http://www.w3.org/2000/svg" aria-label="Warner Bros."><text x="0" y="34" font-family="Georgia,'Times New Roman',serif" font-size="30" font-weight="700" fill="#000" letter-spacing="-0.5">Warner Bros.</text></svg>
-        </div>
-
-        <div class="client-logo">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/7/76/MTV_Logo.svg" alt="MTV" />
-        </div>
-
-        <div class="client-logo">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/c/c6/Comedy_Central_2011_Logo.svg" alt="Comedy Central" />
-        </div>
-
-        <div class="client-logo">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/0/02/CMT_logo.svg" alt="CMT" />
-        </div>
-
-        <div class="client-logo">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/4/47/VH1_logo.svg" alt="VH1" />
-        </div>
-
-        <div class="client-logo">
-          <img src="Assets/Logo_TV.svg" alt="Logo TV" />
-        </div>
-
-        <div class="client-logo">
-          <svg viewBox="0 0 185 44" xmlns="http://www.w3.org/2000/svg" aria-label="Uniqlo"><text x="0" y="36" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="36" font-weight="900" letter-spacing="1" fill="#000">UNIQLO</text></svg>
-        </div>
-
-        <div class="client-logo">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/6/68/Bloomingdale's_Logo.svg" alt="Bloomingdale's" />
-        </div>
-
-        <div class="client-logo">
-          <svg viewBox="0 0 195 56" xmlns="http://www.w3.org/2000/svg" aria-label="Perry Ellis"><text x="97" y="38" text-anchor="middle" font-family="Georgia, serif" font-size="20" fill="#6B6B6B" letter-spacing="3">PERRY ELLIS</text></svg>
-        </div>
-
-        <div class="client-logo">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/e/e2/Calvin_klein_logo.svg" alt="Calvin Klein" />
-        </div>
-
+        <img src="Assets/ARCHER_WORDMARK_RGB_BLACK.svg" alt="Archer" class="client-logo-img">
+        <span class="client-logo-text">OkCupid</span>
+        <img src="Assets/Viacom_logo.svg" alt="Viacom" class="client-logo-img">
+        <span class="client-logo-text">Warner Bros.</span>
+        <img src="Assets/Logo_TV.svg" alt="MTV" class="client-logo-img">
+        <span class="client-logo-text">Comedy Central</span>
+        <span class="client-logo-text">CMT</span>
+        <img src="Assets/ARCHER_WORDMARK_RGB_BLACK.svg" alt="Archer" class="client-logo-img">
+        <span class="client-logo-text">OkCupid</span>
+        <img src="Assets/Viacom_logo.svg" alt="Viacom" class="client-logo-img">
+        <span class="client-logo-text">Warner Bros.</span>
+        <img src="Assets/Logo_TV.svg" alt="MTV" class="client-logo-img">
+        <span class="client-logo-text">Comedy Central</span>
+        <span class="client-logo-text">CMT</span>
       </div>
     </div>
   </section>
 
-
   <!-- ======================================================
-       DESIGN LEADERSHIP
-  ====================================================== -->
-  <section id="leadership">
-    <div class="container">
-      <div class="section-header">
-        <p class="label reveal">Design Leadership</p>
-      </div>
-
-      <!-- Row 1: Description -->
-      <div class="leadership-intro reveal">
-        <p>Great design leadership isn't about taste — it's about creating the conditions where talented people can do their best work. I focus on building psychological safety, clear craft standards, and decision-making processes that scale.</p>
-        <p>At Match Group, I've led multi-disciplinary design teams across product, research, and content design — partnering closely with engineering, product management, and data science to drive outcomes that matter.</p>
-      </div>
-
-      <!-- Row 2: Metrics -->
-      <div class="metrics-row reveal reveal-delay-1">
-        <div class="metric">
-          <div class="metric-num">15</div>
-          <div class="metric-label">Designers led directly &amp; indirectly</div>
-        </div>
-        <div class="metric">
-          <div class="metric-num">97<span class="metric-unit">%</span></div>
-          <div class="metric-label">Team retention over 7 years</div>
-        </div>
-        <div class="metric">
-          <div class="metric-num">4</div>
-          <div class="metric-label">Global brand products managed simultaneously</div>
-        </div>
-        <div class="metric">
-          <div class="metric-num">100<span class="metric-unit">+</span></div>
-          <div class="metric-label">Total product features launched</div>
-        </div>
-        <div class="metric">
-          <div class="metric-num">5</div>
-          <div class="metric-label">International Awards winning</div>
-        </div>
-      </div>
-
-      <!-- Row 2: Pillars -->
-      <div class="leadership-pillars reveal reveal-delay-1" style="display:none;">
-        <div class="pillar">
-          <div class="pillar-num">01</div>
-          <div class="pillar-title">Vision &amp; Strategy</div>
-          <p class="pillar-desc">Translating business goals into design vision. Setting a clear north star that aligns teams and stakeholders around what good looks like — and why it matters.</p>
-        </div>
-        <div class="pillar">
-          <div class="pillar-num">02</div>
-          <div class="pillar-title">Team Growth &amp; Culture</div>
-          <p class="pillar-desc">Developing career frameworks, mentorship programs, and critique practices that help individual designers grow while strengthening the team's collective craft.</p>
-        </div>
-        <div class="pillar">
-          <div class="pillar-num">03</div>
-          <div class="pillar-title">Cross-functional Partnership</div>
-          <p class="pillar-desc">Building bridges between design, engineering, product, and data. Creating rituals and artifacts that keep everyone aligned without slowing teams down.</p>
-        </div>
-        <div class="pillar">
-          <div class="pillar-num">04</div>
-          <div class="pillar-title">Design Operations</div>
-          <p class="pillar-desc">Establishing workflows, tooling standards, and quality checkpoints that scale. Removing friction so designers spend more time designing.</p>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- ======================================================
-       ENGAGEMENT
+       ENGAGEMENT + AWARDS
   ====================================================== -->
   <section id="engagement">
     <div class="container">
       <div class="section-split">
 
-        <!-- Left: Talks -->
         <div>
-          <div class="section-header" style="margin-bottom:2rem;">
-            <p class="label reveal">Talks</p>
-          </div>
+          <h2 class="section-heading reveal" style="margin-bottom:2rem;">Engagements</h2>
           <ul class="simple-list reveal reveal-delay-1">
             <li>
               <span class="simple-list-year">2025</span>
@@ -614,11 +488,8 @@
           </ul>
         </div>
 
-        <!-- Right: Awards -->
         <div id="awards">
-          <div class="section-header" style="margin-bottom:2rem;">
-            <p class="label reveal">Awards</p>
-          </div>
+          <h2 class="section-heading reveal" style="margin-bottom:2rem;">Awards</h2>
           <ul class="simple-list reveal reveal-delay-1">
             <li>
               <span class="simple-list-year">2024</span>
@@ -647,30 +518,26 @@
     </div>
   </section>
 
-
   <!-- ======================================================
        CONTACT
   ====================================================== -->
   <section id="contact">
-    <div class="container">
-      <h2 class="section-title">Let's build something together</h2>
-
-      <div class="contact-links">
-        <a href="mailto:peter@okcupid.com" class="contact-btn contact-btn--primary">
+    <div class="container contact-inner">
+      <h2 class="contact-heading reveal">Let's talk soon.</h2>
+      <div class="contact-links reveal reveal-delay-1">
+        <a href="mailto:lwchang87@gmail.com" class="contact-btn contact-btn--primary">
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
             <rect x="1" y="3" width="14" height="10" rx="2" stroke="currentColor" stroke-width="1.4"/>
             <path d="M1 5l7 5 7-5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
           </svg>
           Send me an email
         </a>
-
-        <a href="https://linkedin.com/in/[your-handle]" target="_blank" rel="noopener" class="contact-btn contact-btn--ghost">
+        <a href="https://www.linkedin.com/in/peter-chang-4aa02450" target="_blank" rel="noopener" class="contact-btn contact-btn--ghost">
           <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
-            <path d="M3.5 5h-2v8h2V5zM2.5 4a1 1 0 100-2 1 1 0 000 2zM13 5c-1.2 0-2.1.5-2.5 1V5h-2v8h2V9a1.5 1.5 0 013 0v4h2V8.5C16 6.4 14.7 5 13 5z"/>
+            <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
           </svg>
           LinkedIn
         </a>
-
       </div>
     </div>
   </section>

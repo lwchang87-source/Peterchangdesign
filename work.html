@@ -8,261 +8,201 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600&family=Raleway:ital,wght@0,400;0,500;0,600;0,700;0,900;1,900&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="style.css" />
-  <style>
-    /* Override swipeable track with a grid for this page */
-    .work-grid-layout {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.5rem;
-    }
-
-    /* Card fills grid cell — no fixed width needed */
-    .work-grid-layout .project-card {
-      flex: none;
-      width: 100%;
-    }
-
-    .work-brand-block {
-      margin-bottom: 5rem;
-    }
-
-    .work-brand-block:last-child {
-      margin-bottom: 0;
-    }
-
-    @media (max-width: 1024px) {
-      .work-grid-layout { grid-template-columns: repeat(2, 1fr); }
-    }
-
-    @media (max-width: 640px) {
-      .work-grid-layout { grid-template-columns: 1fr; }
-    }
-  </style>
 </head>
 <body>
 
   <nav>
     <div class="nav-inner">
       <a href="index.html" class="nav-logo">Peter Chang</a>
-            <ul class="nav-links">
+      <ul class="nav-links">
         <li><a href="work.html">Work</a></li>
         <li><a href="index.html#about">About</a></li>
         <li><a href="https://www.linkedin.com/in/peter-chang-4aa02450" target="_blank" rel="noopener">LinkedIn</a></li>
       </ul>
+      <a href="index.html#contact" class="nav-contact">Contact</a>
       <button class="nav-toggle" aria-label="Toggle menu">
         <span></span><span></span><span></span>
       </button>
     </div>
   </nav>
 
-  <section style="padding-top: calc(var(--nav-h) + 60px); padding-bottom: 100px;">
+  <div class="work-section" style="padding-top: calc(var(--nav-h) + 60px); padding-bottom: 100px;">
     <div class="container">
 
-      <!-- ── Archer ── -->
-      <div class="work-brand-block">
-        <div class="brand-section-label">Archer</div>
-        <div class="work-grid-layout">
-
-          <a href="archer-maps.html" class="project-card">
-            <div class="project-thumb"><img src="Assets/Homepage_card_maps.png" alt="Maps" /></div>
-            <div class="project-body">
-              <h4 class="project-title">Maps</h4>
-              <p class="project-desc">Location-based layer for proximity-driven user discovery.</p>
-            </div>
-          </a>
-
-          <a href="archer-trophies.html" class="project-card">
-            <div class="project-thumb"><img src="Assets/Homepage_card_Trophies.png" alt="Trophies" /></div>
-            <div class="project-body">
-              <h4 class="project-title">Trophies</h4>
-              <p class="project-desc">Behavioral achievement system that signals user identity and intent.</p>
-            </div>
-          </a>
-
-          <a href="archer-status.html" class="project-card">
-            <div class="project-thumb"><img src="Assets/Homepage_card_Status.png" alt="Status" /></div>
-            <div class="project-body">
-              <h4 class="project-title">Status</h4>
-              <p class="project-desc">Real-time presence broadcast to relevant matches.</p>
-            </div>
-          </a>
-
-          <a href="archer-design-system.html" class="project-card">
-            <div class="project-thumb"><img src="Assets/Homepage_card_Design system.png" alt="Design system" /></div>
-            <div class="project-body">
-              <h4 class="project-title">Design System</h4>
-              <p class="project-desc">Built functional product design system for Archer.</p>
-            </div>
-          </a>
-
-          <a href="archer-bullseye.html" class="project-card">
-            <div class="project-thumb"><img src="Assets/Homepage_card_bullseye.png" alt="Bullseye AI" /></div>
-            <div class="project-body">
-              <h4 class="project-title">Bullseye AI</h4>
-              <p class="project-desc">Engine that infers attraction preferences from photos.</p>
-            </div>
-          </a>
-
+      <div class="work-header reveal">
+        <h2 class="work-heading">Work</h2>
+        <div class="filter-tabs">
+          <button class="filter-tab active" data-filter="all">All</button>
+          <button class="filter-tab" data-filter="product-design">Product Design</button>
+          <button class="filter-tab" data-filter="management">Management</button>
+          <button class="filter-tab" data-filter="design-system">Design System</button>
         </div>
       </div>
 
-      <!-- ── OkCupid ── -->
-      <div class="work-brand-block">
-        <div class="brand-section-label">OkCupid</div>
-        <div class="work-grid-layout">
+      <div class="cards-grid">
 
-          <a href="okc-cbm.html" class="project-card">
-            <div class="project-thumb"><img src="Assets/Homepage_card_CBM.png" alt="Compatibility based matching" /></div>
-            <div class="project-body">
-              <h4 class="project-title">Compatibility Based Matching</h4>
-              <p class="project-desc">[ One-line description ]</p>
-            </div>
-          </a>
+        <a href="archer-maps.html" class="project-card reveal" data-category="product-design">
+          <div class="project-thumb">
+            <img src="Assets/Homepage_card_maps.png" alt="Maps" />
+            <span class="card-tag card-tag--brand">Archer</span>
+            <span class="card-tag card-tag--category">Product design</span>
+          </div>
+          <div class="project-body">
+            <h4 class="project-title">Maps</h4>
+            <p class="project-desc">Location-based layer for proximity-driven user discovery.</p>
+          </div>
+        </a>
 
-          <a href="okc-rebranding-ai.html" class="project-card">
-            <div class="project-thumb"><img src="Assets/Homepage_card_Rebranding.png" alt="Rebranding with AI" /></div>
-            <div class="project-body">
-              <h4 class="project-title">Rebranding with AI</h4>
-              <p class="project-desc">[ One-line description ]</p>
-            </div>
-          </a>
+        <a href="archer-trophies.html" class="project-card reveal" data-category="product-design">
+          <div class="project-thumb">
+            <img src="Assets/Homepage_card_Trophies.png" alt="Trophies" />
+            <span class="card-tag card-tag--brand">Archer</span>
+            <span class="card-tag card-tag--category">Product design</span>
+          </div>
+          <div class="project-body">
+            <h4 class="project-title">Trophies</h4>
+            <p class="project-desc">Behavioral achievement system that signals user identity and intent.</p>
+          </div>
+        </a>
 
-          <a href="okc-stacks.html" class="project-card">
-            <div class="project-thumb"><img src="Assets/Homepage_card_Stacks.png" alt="Stacks" /></div>
-            <div class="project-body">
-              <h4 class="project-title">Stacks</h4>
-              <p class="project-desc">[ One-line description ]</p>
-            </div>
-          </a>
+        <a href="archer-status.html" class="project-card reveal" data-category="product-design">
+          <div class="project-thumb">
+            <img src="Assets/Homepage_card_Status.png" alt="Status" />
+            <span class="card-tag card-tag--brand">Archer</span>
+            <span class="card-tag card-tag--category">Product design</span>
+          </div>
+          <div class="project-body">
+            <h4 class="project-title">Status</h4>
+            <p class="project-desc">Real-time presence broadcast to relevant matches.</p>
+          </div>
+        </a>
 
-          <a href="okc-premium-plus.html" class="project-card">
-            <div class="project-thumb"><img src="Assets/Homepage_card_Premium plus.png" alt="Superlikes" /></div>
-            <div class="project-body">
-              <h4 class="project-title">Premium Plus</h4>
-              <p class="project-desc">[ One-line description ]</p>
-            </div>
-          </a>
+        <a href="archer-design-system.html" class="project-card reveal" data-category="design-system">
+          <div class="project-thumb">
+            <img src="Assets/Homepage_card_Design system.png" alt="Design System" />
+            <span class="card-tag card-tag--brand">Archer</span>
+            <span class="card-tag card-tag--category">Design system</span>
+          </div>
+          <div class="project-body">
+            <h4 class="project-title">Design System</h4>
+            <p class="project-desc">Built functional product design system for Archer.</p>
+          </div>
+        </a>
 
-        </div>
+        <a href="archer-bullseye.html" class="project-card reveal" data-category="product-design">
+          <div class="project-thumb">
+            <img src="Assets/Homepage_card_bullseye.png" alt="Bullseye AI" />
+            <span class="card-tag card-tag--brand">Archer</span>
+            <span class="card-tag card-tag--category">Product design</span>
+          </div>
+          <div class="project-body">
+            <h4 class="project-title">Bullseye AI</h4>
+            <p class="project-desc">Engine that infers attraction preferences from photos.</p>
+          </div>
+        </a>
+
+        <a href="okc-cbm.html" class="project-card reveal" data-category="product-design">
+          <div class="project-thumb">
+            <img src="Assets/Homepage_card_CBM.png" alt="Compatibility Based Matching" />
+            <span class="card-tag card-tag--brand">OkCupid</span>
+            <span class="card-tag card-tag--category">Product design</span>
+          </div>
+          <div class="project-body">
+            <h4 class="project-title">Compatibility Based Matching</h4>
+            <p class="project-desc">Create meaningful connections with deeper insights of users.</p>
+          </div>
+        </a>
+
+        <a href="okc-rebranding-ai.html" class="project-card reveal" data-category="design-system">
+          <div class="project-thumb">
+            <img src="Assets/Homepage_card_Rebranding.png" alt="Rebranding with AI" />
+            <span class="card-tag card-tag--brand">OkCupid</span>
+            <span class="card-tag card-tag--category">Design system</span>
+          </div>
+          <div class="project-body">
+            <h4 class="project-title">Rebranding with AI</h4>
+            <p class="project-desc">Modernize OkCupid brand and UI catering to new vision and target audience.</p>
+          </div>
+        </a>
+
+        <a href="okc-premium-plus.html" class="project-card reveal" data-category="product-design">
+          <div class="project-thumb">
+            <img src="Assets/Homepage_card_Premium plus.png" alt="Premium Plus" />
+            <span class="card-tag card-tag--brand">OkCupid</span>
+            <span class="card-tag card-tag--category">Product design</span>
+          </div>
+          <div class="project-body">
+            <h4 class="project-title">Premium Plus</h4>
+            <p class="project-desc">New subscription tier that streamline OkCupid monetization with precision.</p>
+          </div>
+        </a>
+
+        <a href="okc-stacks.html" class="project-card reveal" data-category="product-design">
+          <div class="project-thumb">
+            <img src="Assets/Homepage_card_Stacks.png" alt="Stacks" />
+            <span class="card-tag card-tag--brand">OkCupid</span>
+            <span class="card-tag card-tag--category">Product design</span>
+          </div>
+          <div class="project-body">
+            <h4 class="project-title">Stacks</h4>
+            <p class="project-desc">Discovery in cohorts that help people connect intentionally with context.</p>
+          </div>
+        </a>
+
+        <a href="mgmt-design-quality.html" class="project-card reveal" data-category="management">
+          <div class="project-thumb">
+            <img src="Assets/Homepage_card_Design Quality Evaluation.png" alt="Design Quality Evaluation" />
+            <span class="card-tag card-tag--brand">Match Group</span>
+            <span class="card-tag card-tag--category">Management</span>
+          </div>
+          <div class="project-body">
+            <h4 class="project-title">Design Quality Evaluation</h4>
+            <p class="project-desc">Evaluate existing brand products and create optimization strategy.</p>
+          </div>
+        </a>
+
+        <a href="mgmt-central-ds.html" class="project-card reveal" data-category="management">
+          <div class="project-thumb">
+            <img src="Assets/Homepage_card_Central Design System.png" alt="Central Design System" />
+            <span class="card-tag card-tag--brand">Match Group</span>
+            <span class="card-tag card-tag--category">Management</span>
+          </div>
+          <div class="project-body">
+            <h4 class="project-title">Central Design System</h4>
+            <p class="project-desc">Strategy to efficiently facilitate a multi-brand portfolio organization.</p>
+          </div>
+        </a>
+
+        <a href="mgmt-scaling-design.html" class="project-card reveal" data-category="management">
+          <div class="project-thumb">
+            <img src="Assets/Homepage_card_Scaling Design Process.png" alt="Scaling Design Process" />
+            <span class="card-tag card-tag--brand">Match Group</span>
+            <span class="card-tag card-tag--category">Management</span>
+          </div>
+          <div class="project-body">
+            <h4 class="project-title">Scaling Design Process</h4>
+            <p class="project-desc">Streamline design process and roles for all teams and stakeholders at Match E&amp;E Brands.</p>
+          </div>
+        </a>
+
+        <a href="mgmt-azar-us.html" class="project-card reveal" data-category="management">
+          <div class="project-thumb">
+            <img src="Assets/Homepage_card_Azar Consultation for US.png" alt="Azar Consultation for US market" />
+            <span class="card-tag card-tag--brand">Match Group</span>
+            <span class="card-tag card-tag--category">Management</span>
+          </div>
+          <div class="project-body">
+            <h4 class="project-title">Azar Consultation for US market</h4>
+            <p class="project-desc">Consulting on Azar's product experience and design strategy for the US market.</p>
+          </div>
+        </a>
+
       </div>
-
-      <!-- ── Design Management ── -->
-      <div class="work-brand-block">
-        <div class="brand-section-label">Design Management</div>
-        <div class="work-grid-layout">
-
-          <a href="mgmt-design-quality.html" class="project-card">
-            <div class="project-thumb"><img src="Assets/Homepage_card_Design Quality Evaluation.png" alt="Design Quality Evaluation" /></div>
-            <div class="project-body">
-              <h4 class="project-title">Design Quality Evaluation</h4>
-              <p class="project-desc">Evaluate existing brand products and create optimization strategy.</p>
-            </div>
-          </a>
-
-          <a href="mgmt-central-ds.html" class="project-card">
-            <div class="project-thumb"><img src="Assets/Homepage_card_Central Design System.png" alt="Central Design System" /></div>
-            <div class="project-body">
-              <h4 class="project-title">Central Design System</h4>
-              <p class="project-desc">Strategy to efficiently facilitate a multi-brand portfolio organization.</p>
-            </div>
-          </a>
-
-          <a href="mgmt-scaling-design.html" class="project-card">
-            <div class="project-thumb"><img src="Assets/Homepage_card_Scaling Design Process.png" alt="Scaling Design Process" /></div>
-            <div class="project-body">
-              <h4 class="project-title">Scaling Design Process</h4>
-              <p class="project-desc">Streamline design process and roles for all teams and stakeholders at Match E&amp;E Brands.</p>
-            </div>
-          </a>
-
-          <a href="mgmt-azar-us.html" class="project-card">
-            <div class="project-thumb"><img src="Assets/Homepage_card_Azar Consultation for US.png" alt="Azar Consultation for US market" /></div>
-            <div class="project-body">
-              <h4 class="project-title">Azar Consultation for US market</h4>
-              <p class="project-desc">Consulting on Azar's product experience and design strategy for the US market.</p>
-            </div>
-          </a>
-
-        </div>
-      </div>
-
-      <!-- ── Warner Brothers ── -->
-      <div class="work-brand-block" style="display:none;">
-        <div class="brand-section-label">Warner Brothers</div>
-        <div class="work-grid-layout">
-
-          <a href="wb-mydc.html" class="project-card">
-            <div class="project-thumb"><img src="https://picsum.photos/seed/wbmydc/360/360" alt="DC Universe: My DC" /></div>
-            <div class="project-body">
-              <h4 class="project-title">DC Universe: My DC</h4>
-              <p class="project-desc">[ One-line description ]</p>
-            </div>
-          </a>
-
-          <a href="wb-subscription.html" class="project-card">
-            <div class="project-thumb"><img src="https://picsum.photos/seed/wbsub/360/360" alt="DC Universe: Subscription & ALC" /></div>
-            <div class="project-body">
-              <h4 class="project-title">DC Universe: Subscription &amp; ALC</h4>
-              <p class="project-desc">[ One-line description ]</p>
-            </div>
-          </a>
-
-        </div>
-      </div>
-
-      <!-- ── Viacom ── -->
-      <div class="work-brand-block" style="display:none;">
-        <div class="brand-section-label">Viacom</div>
-        <div class="work-grid-layout">
-
-          <a href="viacom-events.html" class="project-card">
-            <div class="project-thumb"><img src="https://picsum.photos/seed/viacomvma/360/360" alt="Events platform: VMAs, EMAs" /></div>
-            <div class="project-body">
-              <h4 class="project-title">Events Platform: VMAs, EMAs</h4>
-              <p class="project-desc">[ One-line description ]</p>
-            </div>
-          </a>
-
-          <a href="viacom-ema-voting.html" class="project-card">
-            <div class="project-thumb"><img src="https://picsum.photos/seed/emavote/360/360" alt="EMA Voting platform" /></div>
-            <div class="project-body">
-              <h4 class="project-title">EMA Voting Platform</h4>
-              <p class="project-desc">[ One-line description ]</p>
-            </div>
-          </a>
-
-        </div>
-      </div>
-
-      <!-- ── The Science Project ── -->
-      <div class="work-brand-block" style="display:none;">
-        <div class="brand-section-label">The Science Project</div>
-        <div class="work-grid-layout">
-
-          <a href="tsp-bloomingdales.html" class="project-card">
-            <div class="project-thumb"><img src="https://picsum.photos/seed/bloomwin/360/360" alt="Bloomingdale's Holiday Window" /></div>
-            <div class="project-body">
-              <h4 class="project-title">Bloomingdale's Holiday Window</h4>
-              <p class="project-desc">[ One-line description ]</p>
-            </div>
-          </a>
-
-          <a href="tsp-uniqlo.html" class="project-card">
-            <div class="project-thumb"><img src="https://picsum.photos/seed/uniqlodig/360/360" alt="Uniqlo Digital Assistant" /></div>
-            <div class="project-body">
-              <h4 class="project-title">Uniqlo Digital Assistant</h4>
-              <p class="project-desc">[ One-line description ]</p>
-            </div>
-          </a>
-
-        </div>
-      </div>
-
     </div>
-  </section>
+  </div>
 
   <footer>
     <p>© 2026 Peter Chang. All rights reserved.</p>
