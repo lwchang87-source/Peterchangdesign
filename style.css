@@ -883,13 +883,24 @@ nav:not(.nav-hidden) {
   padding: 1rem 2.25rem;
   background: var(--white);
   line-height: 1;
-  transition: border-color 0.2s ease, color 0.2s ease;
+  transition: border-color 0.25s ease, color 0.25s ease, background 0.25s ease;
 }
 
 .capabilities-list span:hover {
-  border-color: var(--text-muted);
-  color: var(--text);
+  border-color: transparent;
+  color: white;
 }
+
+.capabilities-list span:nth-child(1):hover  { background: linear-gradient(135deg, #8B5CF6, #3B82F6); }
+.capabilities-list span:nth-child(2):hover  { background: linear-gradient(135deg, #F97316, #EC4899); }
+.capabilities-list span:nth-child(3):hover  { background: linear-gradient(135deg, #10B981, #06B6D4); }
+.capabilities-list span:nth-child(4):hover  { background: linear-gradient(135deg, #6366F1, #A855F7); }
+.capabilities-list span:nth-child(5):hover  { background: linear-gradient(135deg, #F59E0B, #EF4444); }
+.capabilities-list span:nth-child(6):hover  { background: linear-gradient(135deg, #0EA5E9, #6366F1); }
+.capabilities-list span:nth-child(7):hover  { background: linear-gradient(135deg, #14B8A6, #22C55E); }
+.capabilities-list span:nth-child(8):hover  { background: linear-gradient(135deg, #F43F5E, #FB923C); }
+.capabilities-list span:nth-child(9):hover  { background: linear-gradient(135deg, #A855F7, #EC4899); }
+.capabilities-list span:nth-child(10):hover { background: linear-gradient(135deg, #3B82F6, #14B8A6); }
 
 /* ============================================================
    CLIENTS / PRODUCTS SHIPPED
