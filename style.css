@@ -1153,8 +1153,15 @@ footer p {
   .container { padding: 0 1.25rem; }
 
   /* Nav */
+  .nav-toggle {
+    display: flex;
+    margin-left: auto; /* push hamburger to the right */
+  }
+  .nav-contact { display: none; }
+
+  /* Nav drawer — animated slide-down */
   .nav-links {
-    display: none;
+    display: flex;
     position: absolute;
     top: var(--nav-h);
     left: 0;
@@ -1164,14 +1171,33 @@ footer p {
     padding: 1.5rem 2rem;
     gap: 1.5rem;
     border-bottom: 1px solid var(--border);
+    /* closed state */
+    transform: translateY(-8px);
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+    transition: transform 0.32s var(--ease-out), opacity 0.25s ease, visibility 0s linear 0.32s;
+    z-index: 99;
   }
-  .nav-links.open { display: flex; }
-  .nav-toggle { display: flex; }
-  .nav-contact { display: none; }
+  .nav-links.open {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transition: transform 0.32s var(--ease-out), opacity 0.25s ease, visibility 0s;
+  }
 
-  /* Hero */
+  /* Hero — match width to mobile container padding (1.25rem each side) */
+  .hero-bg,
+  .hero-corner-mask {
+    width: calc(100% - 2.5rem);
+  }
+
   .hero-content {
     grid-template-columns: 1fr;
+    max-width: calc(100% - 2.5rem);
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
     padding-top: 60px;
     padding-bottom: 48px;
     gap: 2.5rem;
@@ -1182,11 +1208,13 @@ footer p {
   .hero-cta { margin-top: 0; }
   .hero-sub { margin-top: 0; }
 
-  /* Work */
+  /* Work — 2 columns with consistent aspect ratio */
   .work-section { padding: 60px 0; }
-  .work-header { margin-bottom: 3rem; }
-  .cards-grid { grid-template-columns: 1fr; gap: 1.5rem 0; }
-  .project-thumb { height: 240px; }
+  .work-header { margin-bottom: 2rem; }
+  .cards-grid { grid-template-columns: repeat(2, 1fr); gap: 1.5rem 0.75rem; }
+  .project-thumb { height: auto; aspect-ratio: 4/5; }
+  .project-title { font-size: 1rem; }
+  .project-desc { font-size: 0.8rem; }
 
   /* About */
   .about-split { grid-template-columns: 1fr; }
@@ -1228,6 +1256,11 @@ footer p {
   .metric-num { font-size: 3rem; }
 
   .capabilities-list span { font-size: 1rem; padding: 0.6rem 1.25rem; }
+
+  /* Work — keep 2 columns, tighter gap */
+  .cards-grid { gap: 1rem 0.5rem; }
+  .project-title { font-size: 0.8rem; }
+  .project-desc { display: none; } /* hide desc at very small sizes */
 }
 
 /* ============================================================
