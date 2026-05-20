@@ -1280,8 +1280,33 @@ footer p {
 }
 
 .cs-content ul li {
-  font-size: 1.15rem;
+  font-size: 1rem;
   color: var(--text-muted);
-  line-height: 1.8;
+  line-height: 1.6;
   margin-bottom: 0.5rem;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+.cs-section-heading h2 {
+  font-weight: 500;
+}
+
+.cs-impact-label,
+.cs-outcome-label,
+.cs-subtitle {
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+.cs-impact-num,
+.cs-outcome-num {
+  font-weight: 500;
+}
+
+.cs-goal + .cs-section-body li,
+.cs-goal + .cs-section-body p {
+  color: var(--text-muted);
+}
+
+.cs-goal + .cs-section-body strong {
+  font-weight: 500;
 }
