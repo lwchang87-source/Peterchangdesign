@@ -235,12 +235,15 @@ nav:not(.nav-hidden) {
   padding: 0;
 }
 
-/* Outer wrap: white page background, full width */
+/* Outer wrap: white page background, full width.
+   overflow: hidden clips carousel cards that bleed outside the hero area
+   on wide viewports, so they can't appear in the surrounding white space. */
 .hero-wrap {
   position: relative;
   background: var(--white);
   padding-top: var(--nav-h);
   min-height: calc(var(--nav-h) + 673px);
+  overflow: hidden;
 }
 
 /* Centered dark box — starts below the fixed nav */
@@ -289,7 +292,10 @@ nav:not(.nav-hidden) {
   height: 0;
   transform-style: preserve-3d;
   animation: carousel-spin 90s linear infinite;
+  opacity: 0;
+  transition: opacity 0.4s ease;
 }
+.hero-carousel.ready { opacity: 1; }
 
 /* X tilt lifts front cards up; Z makes axis diagonal */
 @keyframes carousel-spin {

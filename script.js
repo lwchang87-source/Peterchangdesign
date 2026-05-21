@@ -146,6 +146,11 @@ document.addEventListener('DOMContentLoaded', () => {
       heroCarousel.appendChild(slides[j]);
       [slides[i], slides[j]] = [slides[j], slides[i]];
     }
+    // Reveal carousel after positioning is settled in the next frame,
+    // so users never see the un-positioned/2D-stacked broken state.
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => heroCarousel.classList.add('ready'));
+    });
   }
 
   /* --- Marquee: start only when scrolled into view --------- */
