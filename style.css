@@ -1310,7 +1310,6 @@ footer p {
   .cs-impact-num { font-size: 3.5rem !important; }
   .cs-impact-unit { font-size: 1.75rem !important; }
   .cs-image-full { aspect-ratio: 4/3 !important; }
-  .cs-image-full img { object-fit: contain !important; object-position: center !important; }
   .cs-image-half { grid-template-columns: 1fr !important; }
   .cs-content { max-width: 100%; }
   .cs-content p { font-size: 1rem; }
