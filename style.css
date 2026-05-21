@@ -1283,7 +1283,7 @@ footer p {
   /* Work — keep 2 columns, tighter gap */
   .cards-grid { gap: 2.5rem 0.5rem; }
   .project-title { font-size: 1.125rem; }
-  .project-desc { display: none; } /* hide desc at very small sizes */
+  .project-desc { font-size: 0.75rem; }
 }
 
 /* ============================================================
