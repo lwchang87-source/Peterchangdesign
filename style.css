@@ -1301,7 +1301,7 @@ footer p {
 /* Mobile (≤768px) */
 @media (max-width: 768px) {
   .cs-hero { padding-top: calc(var(--nav-h) + 32px); padding-bottom: 48px; }
-  .cs-title { margin-bottom: 2rem; }
+  .cs-title { font-size: clamp(3rem, 9vw, 5rem) !important; margin-bottom: 2rem; word-break: break-word; }
   .cs-hero-grid { grid-template-columns: 1fr !important; gap: 1.5rem; }
   .cs-details-bar { grid-template-columns: 1fr 1fr !important; }
   .cs-section-grid { grid-template-columns: 1fr !important; gap: 1rem; margin-bottom: 3rem; }
@@ -1319,6 +1319,7 @@ footer p {
 
 /* Small mobile (≤480px) */
 @media (max-width: 480px) {
+  .cs-title { font-size: clamp(2.5rem, 11vw, 3.5rem) !important; }
   .cs-impact-cards { grid-template-columns: repeat(2, 1fr) !important; }
   .cs-impact-num { font-size: 2.5rem !important; }
   .cs-impact-unit { font-size: 1.5rem !important; }
