@@ -1300,9 +1300,9 @@ footer p {
 
 /* Mobile (≤768px) */
 @media (max-width: 768px) {
-  .cs-hero { padding-top: calc(var(--nav-h) + 32px); padding-bottom: 16px; }
+  .cs-hero { padding-top: calc(var(--nav-h) + 32px) !important; padding-bottom: 2rem !important; }
   /* Content section right after the hero image uses inline padding: 5rem 0 100px; override on mobile */
-  section[style*="padding: 5rem 0 100px"] { padding-top: 1.5rem !important; padding-bottom: 60px !important; }
+  section[style*="padding: 5rem 0 100px"] { padding-top: 2rem !important; padding-bottom: 60px !important; }
   .cs-title { font-size: clamp(3rem, 9vw, 5rem) !important; margin-bottom: 2rem; word-break: break-word; }
   .cs-hero-grid { grid-template-columns: 1fr !important; gap: 1.5rem; }
   .cs-details-bar { grid-template-columns: 1fr 1fr !important; }
@@ -1311,7 +1311,7 @@ footer p {
   .cs-impact-cards { grid-template-columns: repeat(2, 1fr) !important; }
   .cs-impact-num { font-size: 3.5rem !important; }
   .cs-impact-unit { font-size: 1.75rem !important; }
-  .cs-image-full { aspect-ratio: 4/3 !important; margin: 0.25rem 0 !important; }
+  .cs-image-full { aspect-ratio: 4/3 !important; margin: 0 !important; }
   .cs-image-half { grid-template-columns: 1fr !important; }
   .cs-content { max-width: 100%; }
   .cs-content p { font-size: 1rem; }
