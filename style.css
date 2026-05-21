@@ -1230,7 +1230,7 @@ footer p {
   .work-header { margin-bottom: 2rem; }
   .cards-grid { grid-template-columns: repeat(2, 1fr); gap: 1.5rem 0.75rem; }
   .project-thumb { height: auto; aspect-ratio: 4/5; }
-  .project-title { font-size: 1rem; }
+  .project-title { font-size: 1.25rem; }
   .project-desc { font-size: 0.8rem; }
 
   /* About */
@@ -1276,7 +1276,7 @@ footer p {
 
   /* Work — keep 2 columns, tighter gap */
   .cards-grid { gap: 1rem 0.5rem; }
-  .project-title { font-size: 1rem; }
+  .project-title { font-size: 1.25rem; }
   .project-desc { display: none; } /* hide desc at very small sizes */
 }
 
