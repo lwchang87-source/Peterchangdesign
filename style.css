@@ -1228,7 +1228,7 @@ footer p {
   /* Work — 2 columns with consistent aspect ratio */
   .work-section { padding: 60px 0; }
   .work-header { margin-bottom: 2rem; }
-  .cards-grid { grid-template-columns: repeat(2, 1fr); gap: 1.5rem 0.75rem; }
+  .cards-grid { grid-template-columns: repeat(2, 1fr); gap: 3rem 0.75rem; }
   .project-thumb { height: auto; aspect-ratio: 4/5; }
   .project-title { font-size: 1.125rem; }
   .project-desc { font-size: 0.8rem; }
@@ -1275,7 +1275,7 @@ footer p {
   .capabilities-list span { font-size: 1rem; padding: 0.6rem 1.25rem; }
 
   /* Work — keep 2 columns, tighter gap */
-  .cards-grid { gap: 1rem 0.5rem; }
+  .cards-grid { gap: 2.5rem 0.5rem; }
   .project-title { font-size: 1.125rem; }
   .project-desc { display: none; } /* hide desc at very small sizes */
 }
