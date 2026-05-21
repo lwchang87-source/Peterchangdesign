@@ -1290,12 +1290,14 @@ footer p {
    CASE STUDY — responsive
    ============================================================ */
 
+/* Taller hero image on all sizes — case-study pages have only one main image */
+.cs-image-full { aspect-ratio: 3/2 !important; }
+
 /* Tablet (≤1024px) */
 @media (max-width: 1024px) {
   .cs-hero-grid { grid-template-columns: 1fr !important; gap: 2rem; }
   .cs-section-grid { grid-template-columns: 1fr 2fr !important; gap: 2rem; }
   .cs-impact-cards { grid-template-columns: repeat(3, 1fr) !important; }
-  .cs-image-full { aspect-ratio: 16/8; }
 }
 
 /* Mobile (≤768px) */
@@ -1309,7 +1311,7 @@ footer p {
   .cs-impact-cards { grid-template-columns: repeat(2, 1fr) !important; }
   .cs-impact-num { font-size: 3.5rem !important; }
   .cs-impact-unit { font-size: 1.75rem !important; }
-  .cs-image-full { aspect-ratio: 4/3; }
+  .cs-image-full { aspect-ratio: 4/3 !important; }
   .cs-image-half { grid-template-columns: 1fr !important; }
   .cs-content { max-width: 100%; }
   .cs-content p { font-size: 1rem; }
@@ -1324,7 +1326,7 @@ footer p {
   .cs-impact-num { font-size: 2.5rem !important; }
   .cs-impact-unit { font-size: 1.5rem !important; }
   .cs-details-bar { grid-template-columns: 1fr !important; }
-  .cs-image-full { aspect-ratio: 4/3; }
+  .cs-image-full { aspect-ratio: 4/3 !important; }
   .cs-snapshot { aspect-ratio: 4/3; }
 }
 
