@@ -1300,7 +1300,9 @@ footer p {
 
 /* Mobile (≤768px) */
 @media (max-width: 768px) {
-  .cs-hero { padding-top: calc(var(--nav-h) + 32px); padding-bottom: 48px; }
+  .cs-hero { padding-top: calc(var(--nav-h) + 32px); padding-bottom: 16px; }
+  /* Content section right after the hero image uses inline padding: 5rem 0 100px; override on mobile */
+  section[style*="padding: 5rem 0 100px"] { padding-top: 1.5rem !important; padding-bottom: 60px !important; }
   .cs-title { font-size: clamp(3rem, 9vw, 5rem) !important; margin-bottom: 2rem; word-break: break-word; }
   .cs-hero-grid { grid-template-columns: 1fr !important; gap: 1.5rem; }
   .cs-details-bar { grid-template-columns: 1fr 1fr !important; }
