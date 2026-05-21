@@ -1276,7 +1276,7 @@ footer p {
 
   /* Work — keep 2 columns, tighter gap */
   .cards-grid { gap: 1rem 0.5rem; }
-  .project-title { font-size: 0.8rem; }
+  .project-title { font-size: 1rem; }
   .project-desc { display: none; } /* hide desc at very small sizes */
 }
 
