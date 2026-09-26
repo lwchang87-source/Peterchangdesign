@@ -265,7 +265,10 @@ nav:not(.nav-hidden) {
 /* Corner mask — sibling of hero-bg, NOT inside it.
    Transparent inside the rounded rect; white box-shadow outside covers any
    carousel cards that bleed beyond the hero box edges. A sibling avoids the
-   overflow:hidden 3D-flattening problem while still giving rounded corners. */
+   overflow:hidden 3D-flattening problem while still giving rounded corners.
+   Spread must cover the full side gutter on any viewport width (the gutter
+   exceeds 80px once the viewport is wider than ~1512px); .hero-wrap's
+   overflow:hidden clips the excess. */
 .hero-corner-mask {
   position: absolute;
   top: var(--nav-h);
@@ -275,7 +278,7 @@ nav:not(.nav-hidden) {
   width: min(1352px, calc(100% - 88px));
   min-height: 673px;
   border-radius: 8px;
-  box-shadow: 0 0 0 80px var(--white);
+  box-shadow: 0 0 0 100vmax var(--white);
   z-index: 1;
   pointer-events: none;
 }
